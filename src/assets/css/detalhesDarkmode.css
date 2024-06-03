@@ -1,0 +1,70 @@
+.trilho{
+    width: 30px;
+    height: 15px;
+    background-color: #7BC8C6;
+    border-radius: 15px;
+    position: relative;
+    margin-right: 40px;
+}
+
+.trilho .indicador {
+    width: 15px;
+    height: 15px;
+    background-color: #2F6F81;
+    border-radius: 50%;
+    transform: scale(.8);
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    transition: .5s;
+}
+.trilho.dark{
+    background-color: #4d4d4d;
+}
+
+.trilho.dark .indicador{
+    left: 30px;
+    background-color: #000000;
+}
+
+body.dark{
+    background-color: #202020;
+}
+
+body.dark #menu{
+    background-color: #202020;
+
+}
+
+body.dark .gradiente-footer{
+    background:linear-gradient(to top , #202020, #202020);
+
+}
+
+
+
+body.dark h1{
+    color: #FFFFFF;
+}
+
+body.dark h2{
+    color: #FFFFFF;
+}
+
+body.dark h3{
+    color: #FFFFFF;
+}
+
+body.dark p{
+    color: #FFFFFF;
+}
+
+header.dark a{
+    color: #FFFFFF;
+}
+
+
+
+body.dark li{
+    color: #FFFFFF;
+}

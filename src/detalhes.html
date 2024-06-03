@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/detalhes.css">
+    <link rel="stylesheet" href="./assets/css/resest.css">
+    <link rel="stylesheet" href="./assets/css/detalhesDarkmode.css">
+    <title>Meu Acompanhante Seguro</title>
+
+</head>
+
+<body>
+    <header id="menu">
+        <div id="menu-interno">
+            <nav id="left">
+                <button>
+                    <div id="botao1">
+                        <div id="ponta"></div>
+                        <div id="corpo"></div>
+                    </div>
+                </button>
+            </nav>
+
+            <nav id="right">
+                <p id="modo-dark">MODO DARK:</p>
+                <div class="trilho" id="trilho">
+                    <div class="indicador"></div>
+                </div>
+                <div id="hamburguer">
+                    <div id="h-elementos"></div>
+                    <div id="h-elementos"></div>
+                    <div id="h-elementos"></div>
+                </div>
+                <div id="menu-hamburguer">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+</body>
+
+</html>
+
+<section id="banner">
+    <figure>
+        <img class="img-banner" src="./assets/images/banner-principal.jpeg" alt="">
+
+        <figcaption id="figcaption1">Meu</figcaption>
+        <figcaption id="figcaption2">Acompanhante</figcaption>
+        <figcaption id="figcaption3">Seguro</figcaption>
+
+    </figure>
+</section>
+
+<div class="texto-titulo">
+    <p>Negligência no uso de EPI'S:</p>
+</div>
+
+<section id="bloco-video">
+    <div id="botao-play">
+        <div id="play"></div>
+    </div>
+</section>
+
+<section id="paragrafo-epis">
+    <div class="slide active">
+        <h2 class="marcacao">
+            1. Lavagem de mãos
+        </h2>
+        <p class="texto-paragrafo">Non sollicitudin tortor sagittis id. Donec euismod, turpis vitae convallis
+            sollicitudin,
+            dolor justo eleifend risus, in hendrerit sapien justo at turpis. Pellentesque luctus ex dolor,
+            in molestie risus sodales eu. Pellentesque volutpat velit id aliquet euismod.
+            Nam id sem at neque egestas viverra id eleifend sem. </p>
+    </div>
+    <div class="slide">
+        <h2 class="marcacao">
+            2. Lavagem de mãos
+        </h2>
+        <p class="texto-paragrafo">Non sollicitudin tortor sagittis id. Donec euismod, turpis vitae convallis
+            sollicitudin,
+            dolor justo eleifend risus, in hendrerit sapien justo at turpis. Pellentesque luctus ex dolor,
+            in molestie risus sodales eu. Pellentesque volutpat velit id aliquet euismod.
+            Nam id sem at neque egestas viverra id eleifend sem. </p>
+    </div>
+    <div class="slide">
+        <h2 class="marcacao">
+            3. Lavagem de mãos
+        </h2>
+        <p class="texto-paragrafo">
+            dolor justo eleifend risus, in hendrerit sapien justo at turpis. Pellentesque luctus ex dolor,
+            in molestie risus sodales eu. Pellentesque volutpat velit id aliquet euismod.
+            Nam id sem at neque egestas viverra id eleifend sem. </p>
+    </div>
+    <div id="botoes-ida-volta">
+        <button onclick="prevSlide()">
+            <div id="botao-esquerda">
+                <div id="ponta1"></div>
+                <div id="corpo1"></div>
+            </div>
+
+
+        </button>
+        <button onclick="nextSlide()">
+            <div id="botao-direita">
+                <div id="corpo2"></div>
+                <div id="ponta2"></div>
+            </div>
+        </button>
+    </div>
+</section>
+
+
+<footer>
+    <div class="shadow-line"></div>
+    <div class="gradiente-footer">
+        <nav id="principal">
+            <ul>
+                <li>R. Araquari, s/n - Potengi, Natal - RN</li>
+                <li>CEP: 59110-390 | Telefone: (84) 3232-7831</li>
+            </ul>
+            <nav>
+                <button id="botao-como-chegar">
+                    <p id="texto-foot">COMO CHEGAR</p>
+                </button>
+            </nav>
+        </nav>
+    </div>
+</footer>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('#paragrafo-epis .slide');
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+            }
+        });
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide > 0) ? currentSlide - 1 : slides.length - 1;
+        showSlide(currentSlide);
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
+        showSlide(currentSlide);
+    }
+
+    let trilho = document.getElementById('trilho')
+    let body = document.querySelector('body')
+    let header = document.querySelector('header')
+    let footer = document.querySelector('footer')
+
+    trilho.addEventListener('click', () => {
+        trilho.classList.toggle('dark')
+        body.classList.toggle('dark')
+        header.classList.toggle('dark')
+        footer.classList.toggle('footer')
+    })
+</script>
+</body>
+
+</html>
