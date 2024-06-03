@@ -1,23 +1,42 @@
 .trilho{
-    width: 30px;
-    height: 15px;
+    width: 70px;
+    height: 30px;
     background-color: #7BC8C6;
-    border-radius: 15px;
+    border-radius: 28px;
     position: relative;
-    margin-right: 40px;
-}
-
-.trilho .indicador {
-    width: 15px;
-    height: 15px;
-    background-color: #2F6F81;
+    margin-right: 50px;
+ }
+ 
+ .trilho .indicador {
+    width: 30px;
+    height: 30px;
+    background-color: #FFFFFF;
     border-radius: 50%;
     transform: scale(.8);
     cursor: pointer;
     position: absolute;
     left: 0;
     transition: .5s;
-}
+ }
+ 
+ .trilho.dark{
+    background-color: #7BC8C6;
+ }
+ 
+ .trilho.dark .indicador{
+    left: 30px;
+    background-color: #000000;
+ }
+ 
+ body.dark{
+    background-color: #202020;
+ }
+
+
+
+ .dark li{
+    color: #FFFFFF;
+ }
 .trilho.dark{
     background-color: #4d4d4d;
 }
