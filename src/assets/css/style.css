@@ -1,0 +1,161 @@
+body {
+    font-family: Arial,  sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .5s;
+
+}
+
+
+#menu{
+display: flex;
+flex-direction: row;
+width: 1200px;
+height: 140px;
+justify-content: space-between;
+}
+
+
+#menu-esquerdo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 600px;
+    height: 140px;
+    border: 1px solid blue;
+}
+
+
+#menu-direito {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    justify-content: flex-end;
+    align-items: center;
+    height: 140px;
+    border: 1px solid green;
+}
+
+
+#principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1150px;
+    height: 800px;
+    border: 1px solid orange;
+    margin: auto;
+    
+
+}
+
+
+
+
+
+#medico{
+    display: flex;
+    margin-bottom: 10px;
+    height: 60px;
+}
+
+
+#higiene{
+    display: flex;
+    margin-bottom: 10px;
+    height: 60px;
+}
+
+
+#perigo{
+    display: flex;
+    margin-bottom: 10px;
+    height: 60px;
+}
+
+
+#alimentos{
+    display: flex;
+    margin-bottom: 10px;
+    height: 60px;
+}
+
+
+.header {
+    background-color: #5dade2;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 20px;
+    width: 80%;
+}
+
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+
+.text h2 {
+    font-size:18px;
+    margin-bottom: 20px;
+    
+}
+
+
+button {
+    background-color: #5dade2;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+
+button:hover {
+    background-color: #2e86c1;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+ }
+    
+ ::-webkit-scrollbar-thumb {
+    background: #b4dedc;;
+    border-radius: 10px;
+ }
+    
+ ::-webkit-scrollbar-thumb:hover {
+    background: #7ec4c4;
+ }
+ 

@@ -1,108 +1,151 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="./assets/css/resest.css">
+    <link rel="stylesheet" href="./assets/css/indexDark.css">
     <script src="./assets/js/script.js" defer></script>
-    
+
     <title>Meu Acompanhante</title>
 </head>
+
 <body>
-     <header id="menu" class="">
-          <nav id="menu-esquerdo">
-            <div class="logo"></div>
-          </nav>
-          <nav id="menu-direito">
-            <p id="modo-dark"></p>
-            <div class="trilho" id="trilho">
-                <div class="indicador"></div>
-          </nav>
-     </header> 
+    <div class="scroll-container">
 
-     <section id="banner">
-        <div class="banner-esquerda">
 
-        </div>
-        <div class="banner-direita">
-            <figure>
-                <img class="logo-completa" src="../src/assets/images/Logo-completa.svg" alt="">
-            </figure>
-        </div>
-     </section>
-        
-    <div class="container">
-        <div class="card">
-            <div class="icon">
-                <figure id="medico">
-                    <img src="assets/images/icone-medico.png" alt="">
-                </figure>
-            </div>
-            <div class="text">
-                <h2>Negligência no uso de EPI'S</h2>
-                <a href="./detalhes.html"><button id="botaomenu1">Leia mais</button></a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="icon">
-                <figure id="higiene">
-                    <img src="assets/images/icone-gel-de-alcool.png" alt="">
-                </figure>
-            </div>
-            <div class="text">
-                <h2>Risco para contaminação cruzada</h2>
-                <a href="./detalhes.html"><button id="botaomenu2">Leia mais</button></a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="icon">
-                <figure id="perigo">
-                    <img src="assets/images/icone-perigo.png" alt="">
-                </figure>
-            </div>
-            <div class="text">
-                <h2>Sinalização e delimitação de áreas de isolamento</h2>
-                <a href="./detalhes.html"><button id="botaomenu3">Leia mais</button></a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="icon">
-                <figure id="alimentos">
-                    <img src="assets/images/icone-entrega-de-alimentos.png" alt="">
-                </figure>
-            </div>
-            <div class="text">
-                <h2>Fluxo irregular de alimentos</h2>
-                <a href="./detalhes.html"><button id="botaomenu4">Leia mais</button></a>
-            </div>
-        </div>
-    </div>
-    
-    
+        <header id="menu">
 
-     <br id="br">
-     <div class="linha-quase-invisivel"></div>
-
-     <footer>
-        <div class="shadow-line"></div>
-        <div class="gradient-footer">
-            <nav id="principal-roda-pe">
-                <ul>
-                    <li>R. Araquari, s/n - Potengi, Natal - RN</li>
-                    <li>CEP: 5911
-                        0-390 | Telefone: (84) 3232-7831</li>
-                </ul>
-                <nav>
-                    <button id="botao-como-chegar">
-                        <p id="texto-foot">COMO CHEGAR</p>
-                    </button>
-                </nav>
+            <nav id="menu-esquerdo">
+                <figure class="fig-logo">
+                    <img id="logo-menu" src="./assets/images/Logomara acompanhante incompleta (1).svg" alt="">
+                </figure>
             </nav>
+            <div class="botoes-rolagem">
+                <button class="fonte-size" onclick="redimensionarFonte()"> <img class="fontes-tamanho"
+                        src="assets/images/icone acessibilidade tamanho da letra.svg"></button>
+            </div>
+
+            <nav id="menu-direito">
+                <p class="dark-mode"></p>
+                <div id="trilho" class="trilho">
+                    <div class="indicador"></div>
+                </div>
+                <div id="menu-login">
+                    <a class="link-login" href="./login.html">
+                        <figure class="login-fig">
+                            <img id="login-img" src="./assets/images/icone-login.svg">
+                            <p class="login-text">login</p>
+                        </figure>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <section id="banner">
+            <div class="banner-esquerda">
+
+            </div>
+            <div class="banner-direita">
+                <figure>
+                    <img class="logo-completa" src="../src/assets/images/Logo-completa.svg" alt="">
+                </figure>
+            </div>
+        </section>
+        <div class="gradient-header">
         </div>
-    </footer>
-    <script src="assets/js/script.js"></script>
-     
+        <div class="container">
+
+            <div class="card">
+                <div class="icon">
+                    <figure id="medico">
+                        <img src="assets/images/icone-medico.png" alt="">
+                    </figure>
+                </div>
+                <div class="text">
+                    <h2 class="h2">Negligência no uso de EPI'S</h2>
+                    <button class="ler-button"><img class="caixa-som"
+                            src="./assets/images/speaker_filled_icon_201869.png">
+                    </button>
+                    <a id="botaomenu1" href="./detalhes.html">Leia mais</a>
+                    <!-- <a href="./detalhes.html"><button id="botaomenu1">Leia mais</button></a> -->
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="icon">
+                    <figure id="higiene">
+                        <img src="assets/images/icone-gel-de-alcool.png" alt="">
+                    </figure>
+                </div>
+
+                <div class="text">
+                    <h2 class="h2">Risco para contaminação cruzada</h2>
+                    <button class="ler-button"><img class="caixa-som"
+                            src="./assets/images/speaker_filled_icon_201869.png"></button>
+
+                    <a id="botaomenu2" href="./detalhes2.html">Leia mais</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon-perigo">
+                    <figure id="perigo">
+                        <img src="assets/images/icone-perigo.png" alt="">
+                    </figure>
+                </div>
+                <div class="text">
+                    <h2 class="h2">Sinalização e delimitação de áreas de isolamento</h2>
+                    <button class="ler-button"><img class="caixa-som"
+                            src="./assets/images/speaker_filled_icon_201869.png"></button>
+                            <a id="botaomenu3" href="./detalhes3.html">Leia mais</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <figure id="alimentos">
+                        <img src="assets/images/icone-entrega-de-alimentos.png" alt="">
+                    </figure>
+                </div>
+                <div class="text">
+                    <h2 class="h2">Fluxo irregular de alimentos</h2>
+                    <button class="ler-button"><img class="caixa-som"
+                            src="./assets/images/speaker_filled_icon_201869.png"></button>
+                            <a id="botaomenu4" href="./detalhes4.html">Leia mais</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <br id="br">
+        <div class="linha-quase-invisivel"></div>
+
+        <footer>
+            <div class="shadow-line"></div>
+            <div class="gradient-footer">
+                <nav id="principal-roda-pe">
+                    <ul class="texto-footer">
+                        <li>R. Araquari, s/n - Potengi, Natal - RN | CEP: 59110-390</li>
+                        <li>Telefone: (84) 3232-7831</li>
+                    </ul>
+                    <nav>
+                        <button id="botao-como-chegar">
+                            <p>COMO CHEGAR</p>
+                        </button>
+                    </nav>
+                </nav>
+            </div>
+        </footer>
+    </div>
+    <script src="./assets/js/indexScript.js">
+
+
+
+    </script>
+
 </body>
+
 </html>
 
