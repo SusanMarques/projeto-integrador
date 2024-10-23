@@ -22,17 +22,22 @@ document.addEventListener('DOMContentLoaded', () => {
     function enableDarkMode() {
         const imagens = document.getElementsByClassName('caixa-som');
         const imagem_login = document.getElementById('login-img');
+        const imagens_sol = document.getElementsByClassName('icone-dark-light');
+        
         trilho.classList.add('dark');
         body.classList.add('dark');
         if (header) header.classList.add('dark');
         if (footer) footer.classList.add('dark');
         
-        
         for (let imagem of imagens) {
             imagem.setAttribute('src', './assets/images/icone-caixa-de-som-branco.png');
         }
-       
+        
         imagem_login.setAttribute('src', './assets/images/icone-login-verde-claro.png');
+        
+        for (let imagem of imagens_sol) {
+            imagem.setAttribute('src', './assets/images/icone-sol-dark-mode.svg'); // Aqui troquei para lua
+        }
 
         localStorage.setItem('dark-mode', 'enabled');
     }
@@ -40,6 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function disableDarkMode() {
         const imagens = document.getElementsByClassName('caixa-som');
         const imagem_login = document.getElementById('login-img');
+        const imagens_sol = document.getElementsByClassName('icone-dark-light');
+        
         trilho.classList.remove('dark');
         body.classList.remove('dark');
         if (header) header.classList.remove('dark');
@@ -49,6 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
             imagem.setAttribute('src', './assets/images/icone-caixa-de-som-preto.png');
         }
         imagem_login.setAttribute('src', './assets/images/icone-login.svg');
+
+        for (let imagem of imagens_sol) {
+            imagem.setAttribute('src', './assets/images/icone-lua-dark-mode.svg'); // Aqui troquei para sol
+        }
 
         localStorage.setItem('dark-mode', 'disabled');
     }
@@ -172,18 +183,18 @@ window.addEventListener('resize', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.getElementById('hamburger');
+    const hamburger = document.getElementById('hamburguer');
     const menu = document.getElementById('menu-hamburguer');
 
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
-        menu - hamburguer.classList.toggle('active');
+        menu.classList.toggle('active');
     });
 });
 
 
-////
+//// botão como chegar
 
 document.getElementById("botao-como-chegar").addEventListener("click", function() {
-    window.location.href = "https://maps.app.goo.gl/mfbMLxPW73PYEYQS6"; // url do mapa com  localização do hospital
+    window.open("https://maps.app.goo.gl/mfbMLxPW73PYEYQS6", "_blank"); // abre o URL em uma nova aba
 });

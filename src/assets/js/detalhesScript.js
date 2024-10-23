@@ -1,3 +1,6 @@
+
+
+////////////////////////
 let currentSlide = 0;
         const slides = document.querySelectorAll('#paragrafo-geral .slide');
 
@@ -19,7 +22,9 @@ let currentSlide = 0;
             currentSlide = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
             showSlide(currentSlide);
         }
-        document.addEventListener('DOMContentLoaded', () => {
+    
+    
+    document.addEventListener('DOMContentLoaded', () => {
     const trilho = document.getElementById('trilho');
     const body = document.querySelector('body');
     const header = document.querySelector('header');
@@ -27,8 +32,10 @@ let currentSlide = 0;
 
     // Verifica o estado do modo dark no localStorage
     if (localStorage.getItem('dark-mode') === 'enabled') {
+        console.log('entrou no local');
         enableDarkMode();
     } else {
+        console.log('saiu no local');
         disableDarkMode();
     }
 
@@ -41,6 +48,7 @@ let currentSlide = 0;
     });
 
     function enableDarkMode() {
+        console.log('entrou');
         const imagens = document.getElementsByClassName('caixa-som');
         const imagem_login = document.getElementById('login-img');
         trilho.classList.add('dark');
@@ -59,6 +67,7 @@ let currentSlide = 0;
     }
 
     function disableDarkMode() {
+        console.log('saiu');
         const imagens = document.getElementsByClassName('caixa-som');
         const imagem_login = document.getElementById('login-img');
         trilho.classList.remove('dark');
@@ -173,7 +182,10 @@ window.addEventListener('resize', () => {
                 texto.style.fontSize = '24px';
             }
         }
+
+        
     }
+    
 });
 
 
@@ -193,14 +205,15 @@ window.addEventListener('resize', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.getElementById('hamburger');
+    const hamburguer = document.getElementById('hamburguer');
     const menu = document.getElementById('menu-hamburguer');
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        menu - hamburguer.classList.toggle('active');
+    hamburguer.addEventListener('click', () => {
+        hamburguer.classList.toggle('active');
+        menu.classList.toggle('show');
     });
 });
+
 
 
 ////

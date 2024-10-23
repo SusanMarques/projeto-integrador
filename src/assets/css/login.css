@@ -16,6 +16,25 @@ body {
     position: relative;
 }
 
+#inicio{
+    width: 100px;
+    height: 50px;
+    z-index: 5;
+    position: relative;
+    bottom: 580px;
+    
+}
+
+#icone-inicio{
+    background-color: #ADDBD8;
+    border-radius: 50%;
+    width: 200%;
+    position: relative;
+    right: 40px;
+    bottom: 10px;
+    
+}
+
 .area-administrador {
     position: absolute;
     top: 4%;

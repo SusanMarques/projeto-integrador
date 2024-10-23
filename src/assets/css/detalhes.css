@@ -9,11 +9,28 @@ body {
     transition: .5s;
 }
 
-
+#imagem-uso-de-mascara {
+    width: 350px;
+    height: 500px;
+}
 
 
 ul {
     list-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b4dedc;
+    ;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7ec4c4;
 }
 
 
@@ -40,23 +57,6 @@ button {
 
 
 
-#botao-como-chegar {
-    height: 0;
-    margin: 35px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-#texto-foot {
-    background-color: #75BFBD;
-    border-radius: 50px;
-    color: #015771;
-    width: 250px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 #menu {
     border: 1px solid #a8a6a6;
@@ -107,17 +107,25 @@ button {
     justify-content: flex-end;
 }
 
+
+
+
+
 #hamburguer {
+    position: relative;
     width: 50px;
-    height: 50px;
-    cursor: pointer;
+    /* Largura do hambúrguer */
+    height: 40px;
+    /* Altura total do hambúrguer */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    /* Ajuste o espaçamento entre as linhas */
+    align-items: center;
+    /* Centraliza as linhas horizontalmente */
+    cursor: pointer;
     z-index: 3;
-    /* Aumentado para estar acima do menu */
     margin-right: 15px;
-
 }
 
 .logo-hamburguer {
@@ -127,18 +135,17 @@ button {
 }
 
 .h-elementos {
-    width: 100%;
-    height: 6px;
-    /* Ajuste de espessura */
-    border-radius: 15px;
-    background: #D9D9D9;
-    transition: background 0.3s ease;
-    background-color: #7BC8C6;
+    width: 80%;
+    /* Ajuste para melhor visualização dentro do novo tamanho */
+    height: 5px;
+    /* Altura de cada linha */
+    background-color: #68AEAC;
+    /* Cor das linhas */
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 #hamburguer:hover .h-elementos {
     background: #015771;
-    /* Mudança de cor ao passar o mouse */
 }
 
 #menu-hamburguer {
@@ -146,22 +153,18 @@ button {
     visibility: hidden;
     position: absolute;
     top: -100%;
-    /* Move o menu para fora da tela, acima do topo */
     width: 300px;
-    /* Ajuste para uma largura específica */
     height: 400px;
-    /* Cobrir toda a altura da tela */
     background: #fff;
     z-index: 2;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transform: translateY(0);
-    /* Inicialmente não há transformação vertical */
     transition: opacity 0.5s ease, visibility 0.5s ease, top 0.5s ease;
     overflow-y: auto;
     border: solid #015B76 5px;
 }
 
-#espaço-hambuger {
+#espaço-hamburguer {
     height: 90px;
 }
 
@@ -171,12 +174,10 @@ button {
     display: block;
     padding: 25px;
     border-top: solid #015B76 1px;
-
 }
 
 #menu-hamburguer a:hover {
     background-color: #ddd;
-
 }
 
 #menu-hamburguer.show {
@@ -186,8 +187,21 @@ button {
     height: 412px;
     background-color: #f0f8ff;
     font-weight: bold;
-
 }
+
+#hamburguer.active .h-elementos:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+}
+
+#hamburguer.active .h-elementos:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburguer.active .h-elementos:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+
 
 
 
@@ -199,13 +213,18 @@ button {
 
 
 
-.img-slide {
-
+.figure-slide {
+    width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 10%;
+}
 
 
+.img-slide {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    width: 60%;
 }
 
 #text-img {
@@ -277,7 +296,7 @@ button {
     width: 50px;
     height: 50px;
     border-radius: 10px;
-    background-color: #f0f0f0;
+    background-color: #ecf7fc75;
     border: 2px solid #7AC6C1;
     margin-right: 20px;
 }
@@ -301,14 +320,12 @@ button {
 }
 
 #bloco-video {
-    background-color: #97f3f0;
+    background-color: transparent;
     width: 1440px;
-    height: 350px;
-    border-radius: 10px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0.5px solid rgba(184, 184, 184, 0.514);
 }
 
 
@@ -330,10 +347,10 @@ button {
 
 .separacao {
     display: flex;
-    width: 30%;
+
     max-width: 700px;
     margin-bottom: 20px;
-    justify-content: space-between;
+
 }
 
 .slide {
@@ -353,6 +370,7 @@ button {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     height: 60px;
+    margin-right: 20px;
 }
 
 .ler-button {
@@ -460,12 +478,38 @@ button {
     justify-content: space-between;
     color: #015771;
     line-height: 40px;
-    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
 
 }
 
 .gradiente-footer {
     background: linear-gradient(to top, #ADDBD8, #f0f8ff);
     height: 200px;
+}
 
+.texto-footer{
+    font-size: 20px;
+    color: #015B76;
+    font-weight: 700;
+    text-align: center;
+}
+
+#botao-como-chegar {
+    height: 0;
+    margin: 35px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#texto-foot {
+    margin-top: 20px;
+    background-color: #75BFBD;
+    border-radius: 50px;
+    color: #015771;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

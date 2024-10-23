@@ -194,3 +194,8 @@ window.addEventListener('resize', () => {
         });
     });
     
+// botão como chegar
+
+document.getElementById("botao-como-chegar").addEventListener("click", function() {
+    window.open("https://maps.app.goo.gl/mfbMLxPW73PYEYQS6", "_blank"); // abre o URL em uma nova aba
+});

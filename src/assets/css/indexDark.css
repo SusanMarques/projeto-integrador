@@ -10,7 +10,6 @@
 .trilho .indicador {
     width: 30px;
     height: 30px;
-    background-color: #FFFFFF;
     border-radius: 50%;
     transform: scale(.8);
     cursor: pointer;
@@ -18,6 +17,17 @@
     left: 0;
     transition: .5s;
 }
+.icone-dark-light{
+    width: 100%;
+    height: 100%;
+    background-color: transparent   ;
+    border-radius: 15px;
+}
+
+body.dark .icone-dark-light{
+    background-color: #FFFFFF;
+}
+
 
 .trilho.dark {
     background-color: #3F3F3F;
@@ -25,15 +35,24 @@
 
 .trilho.dark .indicador {
     left: 40px;
-    background-color: #000000;
 }
 
 body.dark {
     background-color: #202020;
 
 }
+
 body.dark .fonte-size {
-    background-color: #3f3f3f9e;
+    background-color: #ecf7fc75;
+}
+body.dark #banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-image: url("../images/banner-principal-dark.jpeg");
+    width: 1440px;
+    height: 500px;
+    background-size: cover;
 }
 
 body.dark .gradient-header {
@@ -48,10 +67,7 @@ body.dark .gradient-footer {
 body.dark #menu {
     background-color: #202020;
 }
-body.dark #logo-menu.dark-logo {
-    /* Your styles for the logo in dark mode */
-    background-color: #fff; /* Example: Change background to white */
-  }
+
   
 
 .dark li {
@@ -90,6 +106,125 @@ body.dark .shadow-line {
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
 }
 
+@media screen and (max-width: 768px){
+    #menu {
+        display: flex;
+        flex-direction: row;
+        width: 768px;
+        height: 100px;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid gray;
+        background-color: #f0f8ff;
+    }
+
+    #menu-esquerdo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 384px;
+        height: 100px;
+    }
+
+
+
+    #logo-menu {
+        width: 80%;
+    }
+
+    .fig-logo {
+        width: 30%;
+        padding-top: 10px;
+    }
+
+    body.dark #logo-menu {
+        width: 80%;
+        
+    }
+
+    #menu-direito {
+        display: flex;
+        flex-direction: row;
+        width: 384px;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100px;
+    }
+
+    
+#login-img {
+    width: 50px;
+    padding-top: 20px;
+}
+
+    #banner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-image: url("../images/banner-principal.jpeg");
+        width: 768px;
+        height: 270px;
+        background-size: cover;
+
+    }
+    
+    body.dark #banner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-image: url("../images/banner-principal-dark.jpeg");
+        width: 768px;
+        height: 270px;
+        background-size: cover;
+    }
+
+    .banner-direita {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 270px;
+        width: 50%;
+    }
+
+    .gradient-header {
+        width: 768px;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 768px;
+        margin-top: 50px;
+        justify-content: center;
+    }
+
+    .card {
+        width: 550px;
+        
+    }
+
+    .shadow-line {
+        margin-top: 25px;
+        width: 768px;
+        background: rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .gradient-footer {
+        background: linear-gradient(to top, #ADDBD8, #f0f8ff);
+        height: 250px;
+
+
+    }
+
+    #principal-roda-pe {
+        width: 768px;
+    }
+
+
+
+}
 @media screen and (max-width: 480px) {
 
     #menu {
@@ -173,10 +308,19 @@ body.dark .shadow-line {
         flex-direction: row;
         align-items: center;
         background-image: url("../images/banner-principal.jpeg");
-        width: 480px;
+        width: 100%;
         height: 180px;
         background-size: cover;
 
+    }
+    body.dark #banner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-image: url("../images/banner-principal-dark.jpeg");
+        width: 100%;
+        height: 180px;
+        background-size: cover;
     }
 
     .banner-esquerda {
@@ -197,7 +341,7 @@ body.dark .shadow-line {
     .logo-completa {
         width: 70%;
         height: 50%;
-        position: relative;
+        
         left: 15%;
     }
 
@@ -362,4 +506,82 @@ body.dark .shadow-line {
         font-size: 20px;
         width: 350px;
     }
+
+    
 }
+
+@media screen and (max-width: 360px){
+    #menu {
+        border: 1px solid #a8a6a6;
+        background-color: #f0f8ff;
+        width: 360px;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #menu-esquerdo {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        width: 50%;
+        height: 100px;
+    }
+    #logo-menu {
+        width: 100;
+        margin-top: 5px;
+        position: relative;
+        right: 30px;
+        
+    }
+    #banner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-image: url("../images/banner-principal.jpeg");
+        width: 100%;
+        height: 130px;
+        background-size: cover;
+
+    }
+
+    body.dark #banner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-image: url("../images/banner-principal-dark.jpeg");
+        width: 100%;
+        height: 130px;
+        background-size: cover;
+    }
+    .logo-completa {
+        width: 50%;
+        height: 50%;
+        left: 15%;
+    }
+
+    .texto-footer {
+        list-style: none;
+        margin: 20px;
+        font-size: 13.5px;
+    }
+    #botao-como-chegar {
+        display: flex;
+        margin-top: 10px;
+        padding: 10px 10px;
+        font-size: 15px;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        width: 150px;
+    }
+    .fig-logo {
+        width: 45%;
+        padding-top: 10px;
+    }
+    .card {
+        width: 340px;
+    }
+}
+
